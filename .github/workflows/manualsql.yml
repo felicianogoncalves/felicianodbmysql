@@ -43,4 +43,4 @@ jobs:
     - name: check folder
       run: ls -l
     - name: Send greeting
-      run: mysql -h ${{ github.event.inputs.name}} -u feliciano -p'Abcd1234'
+      run: mysql -h ${{ github.event.inputs.name }} -u ${{ secrets.USER }} -p"${{ secrets.PASS }}"
